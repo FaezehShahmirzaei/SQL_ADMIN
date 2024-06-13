@@ -1,0 +1,16 @@
+Use Query Store to extract queries executed by the desired user:sql
+
+SELECT 
+    qs.query_id,
+    qs.plan_id,
+    q.query_text_id,
+    qt.query_sql_text,
+    rs.avg_duration,
+    rs.count_executions,
+    rs.last_execution_time
+FROM sys.query_store_query_text qt
+JOIN sys.query_store_query q ON qt.query_text_id = q.query_text_id
+JOIN sys.query_store_plan p ON q.query_id = p.query_id
+JOIN sys.query_store_runtime_stats rs ON p.plan_id = rs.plan_id
+WHERE qt.query_sql_text LIKE '%username%'  -- sql username
+  AND rs.last_execution_time > DATEADD(month, -1, GETDATE());
