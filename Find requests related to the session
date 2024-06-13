@@ -1,0 +1,8 @@
+SELECT
+    request_id,
+    status,
+    command,
+    start_time,
+    sql_handle
+FROM sys.dm_exec_requests
+WHERE session_id = 52;  -- insted of 52 , use the session number that you can find it with script of the code of file named **query of sql users on server** from this repo
