@@ -1,0 +1,10 @@
+SELECT
+    session_id,
+    login_name,
+    host_name,
+    program_name,
+    client_interface_name,
+    login_time
+FROM sys.dm_exec_sessions
+WHERE is_user_process = 1
+  AND login_name LIKE '%sql user%';  ---  sql server user with sleep session
