@@ -6,3 +6,14 @@ SELECT
     sql_handle
 FROM sys.dm_exec_requests
 WHERE session_id = 52;  -- insted of 52 , use the session number that you can find it with script of the code of file named **query of sql users on server** from this repo
+
+
+
+To get the query text, use sys.dm_exec_sql_text. Suppose the sql_handle from the output of the previous step is 0x02000000C7856B72EED93F3806A8661E01F6A4F00A5A51F10.
+
+
+
+SELECT
+    text
+FROM sys.dm_exec_sql_text(0x02000000C7856B72EED93F3806A8661E01F6A4F00A5A51F10);
+
