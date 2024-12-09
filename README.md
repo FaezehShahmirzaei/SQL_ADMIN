@@ -1,5 +1,3 @@
-Here’s a professional `README.md` file for your project, including the reason behind filtering and relevant resources.
-
 ---
 
 # Cell Type Annotation in PBMCs Using scRNA-Seq Data
