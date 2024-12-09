@@ -39,7 +39,7 @@ This project involves analyzing single-cell RNA sequencing (scRNA-seq) data from
   - **Number of genes per cell**: Remove cells expressing fewer than 200 genes or more than 2500 genes. This removes debris and multiplets (doublets or triplets of cells).
   - **Percentage of mitochondrial reads**: Remove cells with >5% mitochondrial content as they may indicate dying cells.
 - **Resource**: Luecken and Theis (2019). *Current best practices in single-cell RNA-seq analysis: A tutorial*. **Nature Protocols**.  
-  ([Read Article](https://www.nature.com/articles/s41596-019-0276-0))  
+  ([Read Article](https://pubmed.ncbi.nlm.nih.gov/31217225/#:~:text=Mol%20Syst%20Biol.,doi%3A%2010.15252%2Fmsb.))  
 
 ### **2. Filtering Out Lowly Expressed Genes**
 - **Reason**: Genes expressed in very few cells are often uninformative or represent noise in the data. These genes add computational overhead without contributing to biological insights.
@@ -120,7 +120,7 @@ The final output includes an annotated dataset (`cell_type` field in `adata.obs`
 ## **References**
 
 1. Luecken, M. D., & Theis, F. J. (2019). *Current best practices in single-cell RNA-seq analysis: A tutorial*. **Nature Protocols**.  
-   [DOI: 10.1038/s41596-019-0276-0](https://www.nature.com/articles/s41596-019-0276-0)
+   [DOI: 10.15252/msb.20188746](https://pubmed.ncbi.nlm.nih.gov/31217225/#:~:text=Mol%20Syst%20Biol.,doi%3A%2010.15252%2Fmsb.)
 
 2. Wolf, F. A., Angerer, P., & Theis, F. J. (2018). *SCANPY: large-scale single-cell gene expression data analysis*. **Genome Biology**.  
    [DOI: 10.1186/s13059-017-1382-0](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1382-0)
